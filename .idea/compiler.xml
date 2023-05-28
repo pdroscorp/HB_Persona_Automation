@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="HB_Persona_Automation" target="8" />
+      <module name="HB_Persona_Automation" target="11" />
       <module name="pom" target="1.5" />
     </bytecodeTargetLevel>
   </component>

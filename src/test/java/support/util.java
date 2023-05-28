@@ -3,8 +3,10 @@ package support;
 import definitions.hooks;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 
 public class util extends hooks {
@@ -12,8 +14,9 @@ public class util extends hooks {
     public static WebDriverWait wait;
 
     public util() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(200));
-
+        if (driver == null) { setUp();}
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(3000));
     }
 
     public void ventanaActiva(){

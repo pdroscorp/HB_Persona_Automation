@@ -4,7 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
 import support.util;
+
 
 public class loginPage extends util {
 
@@ -14,7 +16,10 @@ public class loginPage extends util {
     public static boolean bRecordar;
     public static String password;
 
-    public loginPage() { PageFactory.initElements(driver, this);    }
+    public loginPage() {
+        PageFactory.initElements(driver, this);
+    }
+
     //https://master.d15fkv0y8p708c.amplifyapp.com/auth
 
     @FindBy(xpath = "//*[@id=\"body\"]/app-root/app-authentication/app-auth/div/div[2]/div/form/div[1]/div/input") private WebElement txtRUC;
