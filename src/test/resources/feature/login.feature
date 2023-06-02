@@ -7,5 +7,7 @@ Feature:  Login en Home Banking Juridico
 
     Given Ingresando a la pagina web de HomeBanking Juridico
     When Escribo numero de ruc "20502110374"
-#    When Selecciono tipo de documento "CE"
-    When Escribo numero de documento "46686856"
+    And Selecciono tipo de documento "CE"
+    And Escribo numero de documento "46686856"
+    And Escribo contraseña correcta "abc123"
+    #And Hago Click ingresar plataforma

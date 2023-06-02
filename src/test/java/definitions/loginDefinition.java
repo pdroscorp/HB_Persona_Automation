@@ -20,24 +20,33 @@ public class loginDefinition {
     @Given("Ingresando a la pagina web de HomeBanking Juridico")
     public void validoQueMiAplicacionEsteOperativa() throws IOException {
         hooks.driver.get("https://master.d15fkv0y8p708c.amplifyapp.com/auth");
-
         //evidencia();
     }
 
-    @And("Escribo numero de ruc {string}")
+    @When("Escribo numero de ruc {string}")
     public void escriboNumeroRuc(String numeroRUc) throws IOException {
         login.escribirRUC(numeroRUc);
         // evidencia();
     }
-    @When("Selecciono tipo de documento {string}")
+    @And("Selecciono tipo de documento {string}")
     public void seleccionoTipoDocumento(String tipoDoc) throws IOException, InterruptedException {
         login.seleccionarTipoDoc(tipoDoc);
-        Thread.sleep(3000);
+        //Thread.sleep(3000);
         //evidencia();
     }
-    @When("Escribo numero de documento {string}")
+    @And("Escribo numero de documento {string}")
     public void escriboNumeroDocumento(String numeroDoc) throws IOException {
         login.escribirDoc(numeroDoc);
+        // evidencia();
+    }
+    @And("Escribo contraseña correcta {string}")
+    public void escriboContrasena(String txtPassword) throws IOException {
+        login.escribirPassword(txtPassword);
+        // evidencia();
+    }
+    @And("Hago Click ingresar plataforma")
+    public void hagoClickEnIngresarPlataforma() throws IOException {
+        login.clickBotonIngresar();
         // evidencia();
     }
 
