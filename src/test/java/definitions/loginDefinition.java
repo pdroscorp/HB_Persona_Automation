@@ -17,21 +17,16 @@ public class loginDefinition {
 
     }
 
-    @Given("Ingresando a la pagina web de HomeBanking Juridico")
+    @Given("Ingresando a la pagina web de HomeBanking Natural")
     public void validoQueMiAplicacionEsteOperativa() throws IOException {
-        hooks.driver.get("https://master.d15fkv0y8p708c.amplifyapp.com/auth");
+        hooks.driver.get("https://zonasegura.cajaica.pe/personasOwasp/auth");
+        login.aceptarUbicacion();
         //evidencia();
     }
 
-    @When("Escribo numero de ruc {string}")
-    public void escriboNumeroRuc(String numeroRUc) throws IOException {
-        login.escribirRUC(numeroRUc);
-        // evidencia();
-    }
     @And("Selecciono tipo de documento {string}")
     public void seleccionoTipoDocumento(String tipoDoc) throws IOException, InterruptedException {
         login.seleccionarTipoDoc(tipoDoc);
-        //Thread.sleep(3000);
         //evidencia();
     }
     @And("Escribo numero de documento {string}")

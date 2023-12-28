@@ -7,52 +7,39 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import support.util;
-
 import java.util.Hashtable;
 
-
 public class loginPage extends util {
-
 
     public loginPage() {
         PageFactory.initElements(driver, this);
     }
-
     //https://master.d15fkv0y8p708c.amplifyapp.com/auth
-
     @FindBy(xpath = "//*[@id=\"body\"]/app-root/app-authentication/app-auth/div/div[2]/div/form/div[1]/div/input")
     private WebElement txtRUC;
-
     @FindBy(xpath = "//*[@id=\"body\"]/div[2]/div/div[6]/button[1]")
     private WebElement btnLocation;
-
     @FindBy(css = ".ng-arrow-wrapper")
+    //@FindBy(xpath = "//ng-select/div/div/div[3]")
     private WebElement cboDoc;
-
     @FindBy(xpath = "//ng-dropdown-panel/div/div[2]/div")
     private WebElement cboDocDNI;
-
     @FindBy(xpath = "//ng-dropdown-panel/div/div[2]/div[2]")
     private WebElement cboDocCE;
-
     @FindBy(xpath = "//ng-dropdown-panel/div/div[2]/div[3]")
     private WebElement cboDocPASS;
 
-    @FindBy(xpath = "//*[@id=\"body\"]/app-root/app-authentication/app-auth/div/div[2]/div/form/div[2]/div/input")
+    @FindBy(xpath = "//*[@id=\"body\"]/app-root/app-authentication/app-auth/div/div[2]/div/form/div/div/input")
     private WebElement txtNroDoc;
-
-    @FindBy(xpath = "//*[@id=\"body\"]/app-root/app-authentication/app-auth/div/div[2]/div/form/div[4]/div/input") private WebElement txtPassword;
-
+    @FindBy(xpath = "//*[@id=\"body\"]/app-root/app-authentication/app-auth/div/div[2]/div/form/div[3]/div/input")
+    private WebElement txtPassword;
     @FindBy(xpath = "//*[@id=\"body\"]/app-root/app-authentication/app-auth/div/div[2]/div/form/div[7]/button")
     private WebElement btnIngresar;
 
-
-    public void escribirRUC(String nroRUC)
+    public void aceptarUbicacion()
     {
         btnLocation.click();
-        txtRUC.sendKeys(nroRUC);
     }
-
     public void seleccionarTipoDoc(String tipoDoc)
     {
         cboDoc.click();
