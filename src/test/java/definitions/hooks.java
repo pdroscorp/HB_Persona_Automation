@@ -40,6 +40,14 @@ public class hooks {
         driver.manage().deleteAllCookies();
         driver.close();
     }
+    public static void tearSleep()
+    {
+        try{
+            Thread.sleep(6000);
+        }
+        catch(InterruptedException ie){
+        }
+    }
 
 }
 

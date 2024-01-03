@@ -15,4 +15,5 @@ Feature:  Login en Home Banking Juridico
 
   Scenario: Ingreso a Consultas
 
-    Given Ingresando a la barra de navegación de Consultas
+    Given Ingresando a la barra de navegación de Consultas2
+    And Activo Desactivo mostrar saldo
