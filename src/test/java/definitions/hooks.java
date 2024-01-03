@@ -17,7 +17,7 @@ public class hooks {
             //System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-            //driver.manage().window().maximize();
+            driver.manage().window().maximize();
             driver.manage().deleteAllCookies();
         }
         else if (navegador.equals("firefox"))
