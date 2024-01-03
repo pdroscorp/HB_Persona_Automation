@@ -33,7 +33,9 @@ public class loginPage extends util {
     private WebElement txtNroDoc;
     @FindBy(xpath = "//*[@id=\"body\"]/app-root/app-authentication/app-auth/div/div[2]/div/form/div[3]/div/input")
     private WebElement txtPassword;
-    @FindBy(xpath = "//*[@id=\"body\"]/app-root/app-authentication/app-auth/div/div[2]/div/form/div[7]/button")
+
+    //@FindBy(xpath = "//*[@id=\"body\"]/app-root/app-authentication/app-auth/div/div[2]/div/form/div[7]/button")
+    @FindBy(xpath = "//*[@id=\"body\"]/app-root/app-authentication/app-auth/div/div[2]/div/form/div[6]/button")
     private WebElement btnIngresar;
 
     public void aceptarUbicacion()

@@ -19,7 +19,8 @@ public class loginDefinition {
 
     @Given("Ingresando a la pagina web de HomeBanking Natural")
     public void validoQueMiAplicacionEsteOperativa() throws IOException {
-        hooks.driver.get("https://zonasegura.cajaica.pe/personasOwasp/auth");
+        //hooks.driver.get("https://zonasegura.cajaica.pe/personasOwasp/auth");
+        hooks.driver.get("http://localhost:2555/auth");
         login.aceptarUbicacion();
         //evidencia();
     }

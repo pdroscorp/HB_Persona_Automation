@@ -9,4 +9,10 @@ Feature:  Login en Home Banking Juridico
     And Selecciono tipo de documento "DNI"
     And Escribo numero de documento "46686856"
     And Escribo contraseña correcta "abc123"
-    #And Hago Click ingresar plataforma
+    And Hago Click ingresar plataforma
+
+  @ConsultaCuentas
+
+  Scenario: Ingreso a Consultas
+
+    Given Ingresando a la barra de navegación de Consultas
